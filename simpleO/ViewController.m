@@ -16,18 +16,27 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
     _simpleView = [[UIView alloc] initWithFrame:CGRectMake(40, 40, 20, 20)];
     _simpleView.backgroundColor = [UIColor purpleColor];
     
     _tableView = [[UITableView alloc] initWithFrame:CGRectZero];
     [_tableView registerClass:UITableViewCell.class forCellReuseIdentifier:@"cell"];
+    _dataSourceTable = [[DataSourceTableView alloc] init];
+    _tableView.delegate = _dataSourceTable;
+    _tableView.dataSource = _dataSourceTable;
     
-    _dataSource = [[DataSourceTableView alloc] init];
-    _tableView.delegate = _dataSource;
-    _tableView.dataSource = _dataSource;
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    [_collectionView registerClass:UICollectionViewCell.class forCellWithReuseIdentifier:@"cell"];
+    _dataSourceCollection = [[DataSourceCollectionView alloc]init];
+    _collectionView.delegate = _dataSourceCollection;
+    _collectionView.dataSource = _dataSourceCollection;
     
     [self.view addSubview:_simpleView];
     [self.view addSubview:_tableView];
+    [self.view addSubview:_collectionView];
     [self setConstraint];
 }
 
@@ -48,6 +57,12 @@
     [_tableView.bottomAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.bottomAnchor constant:-30].active = YES;
     [_tableView.heightAnchor constraintEqualToConstant:200].active = YES;
     
+    //collectionView
+    _collectionView.translatesAutoresizingMaskIntoConstraints = NO;
+    [_collectionView.leadingAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.leadingAnchor constant:20.0].active = YES;
+    [_collectionView.topAnchor constraintEqualToAnchor:self.view.safeAreaLayoutGuide.topAnchor constant:20.0].active = YES;
+    [_collectionView.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-20.0].active = YES;
+    [_collectionView.bottomAnchor constraintEqualToAnchor:_simpleView.topAnchor constant:-20.0].active = YES;
 }
 
 

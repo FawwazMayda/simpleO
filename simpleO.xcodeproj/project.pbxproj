@@ -15,6 +15,7 @@
 		4D084A8126DDF396008D1E13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D084A7F26DDF396008D1E13 /* LaunchScreen.storyboard */; };
 		4D084A8426DDF396008D1E13 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D084A8326DDF396008D1E13 /* main.m */; };
 		4D084A8F26DE0414008D1E13 /* DataSourceTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D084A8E26DE0414008D1E13 /* DataSourceTableView.m */; };
+		4D084A9326DE690A008D1E13 /* DataSourceCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D084A9226DE690A008D1E13 /* DataSourceCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		4D084A8326DDF396008D1E13 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4D084A8C26DE038A008D1E13 /* DataSourceTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceTableView.h; sourceTree = "<group>"; };
 		4D084A8E26DE0414008D1E13 /* DataSourceTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSourceTableView.m; sourceTree = "<group>"; };
+		4D084A9226DE690A008D1E13 /* DataSourceCollectionView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataSourceCollectionView.m; sourceTree = "<group>"; };
+		4D084A9526DE6921008D1E13 /* DataSourceCollectionView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataSourceCollectionView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 			children = (
 				4D084A8C26DE038A008D1E13 /* DataSourceTableView.h */,
 				4D084A8E26DE0414008D1E13 /* DataSourceTableView.m */,
+				4D084A9226DE690A008D1E13 /* DataSourceCollectionView.m */,
+				4D084A9526DE6921008D1E13 /* DataSourceCollectionView.h */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D084A7926DDF394008D1E13 /* ViewController.m in Sources */,
+				4D084A9326DE690A008D1E13 /* DataSourceCollectionView.m in Sources */,
 				4D084A7326DDF394008D1E13 /* AppDelegate.m in Sources */,
 				4D084A8426DDF396008D1E13 /* main.m in Sources */,
 				4D084A7626DDF394008D1E13 /* SceneDelegate.m in Sources */,
